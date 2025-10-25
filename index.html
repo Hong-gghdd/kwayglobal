@@ -1,479 +1,577 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="gKUoApiNDfEDyf4TXx6Q4JdXSaLd7PMMXzLoZFZL0co" />
     <meta name="naver-site-verification" content="cca14f3ad582e916a4ddb5f93538929bf3b78ce9" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="케이웨이, 케이웨이글로벌, K-WAY GLOBAL, kwayglobal, 한국유학, 한국 유학, 동남아 유학, 유학 에이전시, 유학 대행, 유학 컨설팅, 유학 비자, 한국대학, 대학 입학, 어학연수, 유학원, 유학 사후관리">
-    <meta name="description" content="케이웨이글로벌(K-WAY GLOBAL)은 동남아시아 학생들을 위한 한국 유학 전문 에이전시입니다. 입학 컨설팅, 비자 대행, 숙소 알선, 사후 관리까지 전 과정을 책임집니다.">
-    <title>케이웨이글로벌 | K-WAY GLOBAL - 한국 유학 전문 에이전시</title>
+    <title>K-WAY GLOBAL | 동남아시아 학생들을 위한 한국 유학의 길잡이</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-color: #0A2E5B; /* Deep Blue */
+            --secondary-color: #4A90E2; /* Bright Blue */
+            --accent-color: #F5A623; /* Warm Orange */
         }
-
         body {
-            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Inter', sans-serif;
         }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: transform 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        section {
-            margin-bottom: 80px;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #667eea;
-        }
-
-        .intro {
-            background: #f8f9fa;
-        }
-
-        .intro-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        .universities {
-            background: #f8f9fa;
-        }
-
-        .region-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .region-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-
-        .region-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-
-        .region-card ul {
-            list-style: none;
-        }
-
-        .region-card li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .region-card li:last-child {
-            border-bottom: none;
-        }
-
-        .process {
-            background: white;
-        }
-
-        .process-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .step {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 15px;
-        }
-
-        .step-number {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .step-content h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .faq {
-            background: #f8f9fa;
-        }
-
-        .faq-list {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-        }
-
-        .faq-question {
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
+        .bg-primary { background-color: var(--primary-color); }
+        .text-primary { color: var(--primary-color); }
+        .bg-secondary { background-color: var(--secondary-color); }
+        .text-secondary { color: var(--secondary-color); }
+        .bg-accent { background-color: var(--accent-color); }
+        .text-accent { color: var(--accent-color); }
         .faq-answer {
-            color: #555;
-            line-height: 1.8;
-        }
-
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .step {
-                flex-direction: column;
-                text-align: center;
-            }
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
         }
     </style>
 </head>
-<body>
-    <div class="hero">
-        <h1>K-WAY GLOBAL (케이웨이글로벌)</h1>
-        <p>한국 유학의 든든한 파트너</p>
-        <a href="#services" class="btn">서비스 알아보기</a>
-    </div>
+<body class="bg-gray-50 text-gray-800">
 
-    <section class="intro">
-        <div class="container">
-            <h2>케이웨이글로벌 회사소개</h2>
-            <div class="intro-content">
-                <p><strong>K-WAY GLOBAL(케이웨이글로벌)은 단순한 유학 에이전시를 넘어, 여러분의 든든한 한국 생활 파트너입니다.</strong></p>
-                <br>
-                <p>K-WAY GLOBAL은 동남아시아 학생들이 한국에서의 학업과 생활에 성공적으로 정착할 수 있도록 돕기 위해 설립되었습니다. 다년간의 경험을 가진 유학 전문가들이 학생 개개인의 목표와 상황에 맞는 최적의 솔루션을 제공합니다.</p>
-                <br>
-                <p>복잡한 입학 절차부터 낯선 현지 생활 적응까지, 유학의 모든 과정에서 겪을 수 있는 어려움을 세심하게 살피고 지원하며, 여러분이 오직 학업에만 집중할 수 있는 환경을 만들어 드리는 것을 목표로 합니다.</p>
-                <br>
-                <p><strong>여러분의 꿈을 향한 여정에 케이웨이글로벌(K-WAY GLOBAL)이 신뢰할 수 있는 동반자가 되겠습니다.</strong></p>
-            </div>
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">
+                <svg viewBox="0 0 250 40" xmlns="http://www.w3.org/2000/svg" class="h-10 w-auto">
+                    <!-- Stylized K Icon -->
+                    <path d="M5 2 L 20 20 L 5 38" stroke="#4A90E2" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 20 L 32 8" stroke="#0A2E5B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 20 L 32 32" stroke="#0A2E5B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    <!-- Text -->
+                    <text x="45" y="28" font-family="Inter, sans-serif" font-size="24" font-weight="800" fill="#0A2E5B">K-WAY 
+                        <tspan font-weight="400" fill="#4A90E2">GLOBAL</tspan>
+                    </text>
+                </svg>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-secondary transition-colors duration-300">회사소개</a>
+                <a href="#services" class="text-gray-600 hover:text-secondary transition-colors duration-300">서비스</a>
+                <a href="#universities" class="text-gray-600 hover:text-secondary transition-colors duration-300">주요대학</a>
+                <a href="#process" class="text-gray-600 hover:text-secondary transition-colors duration-300">유학절차</a>
+                <a href="#faq" class="text-gray-600 hover:text-secondary transition-colors duration-300">자주묻는 Q&A</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
         </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>케이웨이글로벌의 전문적인 한국 유학 토탈 서비스</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 40px;">컨설팅부터 사후관리까지, 유학의 모든 단계를 책임집니다.</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>대학/어학당 컨설팅</h3>
-                    <p>학생의 전공, 성적, 목표에 맞는 최적의 학교와 과정을 추천합니다.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>입학 지원 대행</h3>
-                    <p>자기소개서, 학업계획서 작성부터 원서 접수까지 모든 과정을 도와드립니다.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>유학 비자 발급 지원</h3>
-                    <p>복잡한 비자 서류 준비와 신청 절차를 정확하고 신속하게 지원합니다.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>장학금 정보 제공</h3>
-                    <p>정부, 대학, 재단 등 다양한 장학금 정보를 제공하여 학비 부담을 덜어드립니다.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>공항 픽업 서비스</h3>
-                    <p>한국 도착 시 공항에서 숙소까지 안전하고 편안하게 이동할 수 있도록 돕습니다.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>숙소 알선</h3>
-                    <p>기숙사, 원룸, 쉐어하우스 등 예산과 생활 패턴에 맞는 최적의 숙소를 찾아드립니다.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>휴대폰 개통 및 은행 계좌</h3>
-                    <p>한국 생활 필수품인 휴대폰과 은행 계좌 개설을 빠르고 간편하게 처리해 드립니다.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>지속적인 사후 관리</h3>
-                    <p>유학 생활 중 발생하는 문제나 고민을 해결할 수 있도록 지속적으로 소통하고 지원합니다.</p>
-                </div>
-            </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-secondary">회사소개</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-secondary">서비스</a>
+            <a href="#universities" class="block py-2 text-gray-600 hover:text-secondary">주요대학</a>
+            <a href="#process" class="block py-2 text-gray-600 hover:text-secondary">유학절차</a>
+            <a href="#faq" class="block py-2 text-gray-600 hover:text-secondary">자주묻는 Q&A</a>
         </div>
-    </section>
+    </header>
 
-    <section class="universities">
-        <div class="container">
-            <h2>지역별 주요 대학</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 40px;">대한민국 전역의 우수한 대학들을 지역별로 살펴보세요.</p>
-            
-            <div class="region-grid">
-                <div class="region-card">
-                    <h3>수도권</h3>
-                    <ul>
-                        <li>서울대학교</li>
-                        <li>연세대학교</li>
-                        <li>고려대학교</li>
-                        <li>성균관대학교</li>
-                        <li>한양대학교</li>
-                        <li>경희대학교</li>
-                        <li>인하대학교</li>
-                    </ul>
-                </div>
-                
-                <div class="region-card">
-                    <h3>충청권</h3>
-                    <ul>
-                        <li>충남대학교</li>
-                        <li>충북대학교</li>
-                        <li>단국대학교</li>
-                        <li>순천향대학교</li>
-                        <li>공주대학교</li>
-                    </ul>
-                </div>
-                
-                <div class="region-card">
-                    <h3>호남권</h3>
-                    <ul>
-                        <li>전남대학교</li>
-                        <li>전북대학교</li>
-                        <li>조선대학교</li>
-                        <li>목포대학교</li>
-                        <li>순천대학교</li>
-                    </ul>
-                </div>
-                
-                <div class="region-card">
-                    <h3>영남권</h3>
-                    <ul>
-                        <li>부산대학교</li>
-                        <li>경북대학교</li>
-                        <li>영남대학교</li>
-                        <li>동아대학교</li>
-                        <li>경상대학교</li>
-                    </ul>
-                </div>
-                
-                <div class="region-card">
-                    <h3>강원/제주권</h3>
-                    <ul>
-                        <li>강원대학교</li>
-                        <li>제주대학교</li>
-                        <li>한라대학교</li>
-                    </ul>
-                </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] flex items-center justify-center text-white" style="background-image: url('https://images.pexels.com/photos/5940841/pexels-photo-5940841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div class="relative z-10 text-center px-6 sm:px-8 md:px-12">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg leading-normal">
+                    한국 유학<br>
+                    <span class="text-secondary">K-WAY GLOBAL</span>이<br>
+                    함께합니다.
+                </h1>
+                <a href="#services" class="mt-8 inline-block bg-secondary hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full transition-transform duration-300 hover:scale-105">서비스 알아보기</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="process">
-        <div class="container">
-            <h2>케이웨이글로벌 K-WAY GLOBAL 유학 절차</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 40px;">체계적인 프로세스로 성공적인 한국 유학을 약속합니다.</p>
-            
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>상담 및 학교 선정</h3>
-                        <p>전문 컨설턴트와의 1:1 심층 상담을 통해 학생에게 맞는 학교와 전공을 결정합니다.</p>
+        <!-- 회사소개 (About Us) -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="inline-block bg-primary text-white text-2xl md:text-3xl font-extrabold py-2 px-8 rounded-full shadow-lg mb-4">회사소개</h2>
+                <p class="text-gray-600 mb-12 text-lg">K-WAY GLOBAL은 단순한 유학 에이전시를 넘어, 여러분의 든든한 한국 생활 파트너입니다.</p>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="팀원들이 함께 일하는 이미지" class="rounded-lg shadow-lg">
                     </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>입학 서류 준비 및 지원</h3>
-                        <p>입학에 필요한 모든 서류(학업계획서, 추천서 등)를 준비하고 원서를 접수합니다.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>입학 허가 및 학비 납부</h3>
-                        <p>합격 후 입학허가서를 수령하고, 지정된 기간 내에 학비를 납부합니다.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>비자 신청 및 발급</h3>
-                        <p>표준입학허가서를 바탕으로 유학 비자(D-2) 신청을 진행하고 발급받습니다.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <h3>출국 준비 및 현지 정착</h3>
-                        <p>항공권, 숙소, 공항 픽업 등 출국 준비를 마치고, 한국 현지 생활 정착을 지원합니다.</p>
+                    <div class="md:w-1/2 text-lg text-gray-700 space-y-4">
+                        <p>K-WAY GLOBAL은 동남아시아 학생들이 한국에서의 학업과 생활에 성공적으로 정착할 수 있도록 돕기 위해 설립되었습니다. 다년간의 경험을 가진 유학 전문가들이 학생 개개인의 목표와 상황에 맞는 최적의 솔루션을 제공합니다.</p>
+                        <p>복잡한 입학 절차부터 낯선 현지 생활 적응까지, 유학의 모든 과정에서 겪을 수 있는 어려움을 세심하게 살피고 지원하며, 여러분이 오직 학업에만 집중할 수 있는 환경을 만들어 드리는 것을 목표로 합니다.</p>
+                        <p>여러분의 꿈을 향한 여정에 K-WAY GLOBAL이 신뢰할 수 있는 동반자가 되겠습니다.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="faq">
-        <div class="container">
-            <h2>자주묻는 Q&A</h2>
-            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 40px;">유학 준비에 관한 궁금증을 해결해 드립니다.</p>
-            
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">Q. 한국 유학을 위해 어떤 비자가 필요한가요?</div>
-                    <div class="faq-answer">학위 과정은 유학(D-2) 비자, 어학연수는 일반연수(D-4) 비자가 필요합니다. 케이웨이글로벌(K-WAY GLOBAL)에서는 대학교에서 표준입학허가서를 발급받은 후, 학생에게 필요한 모든 비자 서류 준비와 신청 절차를 단계별로 상세히 안내해 드립니다.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Q. 한국 유학 비용은 얼마나 드나요?</div>
-                    <div class="faq-answer">비용은 지역과 학교, 전공에 따라 차이가 큽니다. 일반적으로 수도권 사립대학교 기준 한 학기 등록금은 400만원에서 800만원 사이이며, 월 생활비(숙소, 식비, 교통비 등)는 60만원에서 100만원 정도 예상할 수 있습니다. 저희가 장학금 정보를 함께 안내하여 부담을 덜어드립니다.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Q. 유학 중 아르바이트가 가능한가요?</div>
-                    <div class="faq-answer">네, 가능합니다. 유학(D-2) 비자는 입국 6개월 후부터, 어학연수(D-4) 비자는 출석률 90% 이상을 유지하며 입국 6개월이 지나면 시간제 취업(아르바이트) 허가를 받을 수 있습니다. 주중에는 최대 20시간까지 가능하며, 관련 절차도 저희가 도와드립니다.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Q. 한국어를 못해도 유학이 가능한가요?</div>
-                    <div class="faq-answer">네, 가능합니다. 최근 많은 한국 대학들이 외국인 유학생을 위해 100% 영어로만 진행되는 학위 과정을 다양하게 제공하고 있습니다. 또는, 대학교 부설 어학당에서 한국어를 먼저 배운 후 학위 과정에 진학하는 방법도 있습니다. 케이웨이글로벌(K-WAY GLOBAL)이 학생의 상황에 가장 적합한 과정을 찾아드립니다.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Q. 한국에서 의료 보험은 어떻게 되나요?</div>
-                    <div class="faq-answer">네, 대한민국에 6개월 이상 체류하는 모든 외국인은 국민건강보험에 의무적으로 가입해야 합니다. 이를 통해 병원 방문 시 진료비의 상당 부분을 지원받는 등 저렴한 비용으로 한국의 우수한 의료 서비스를 이용할 수 있습니다.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Q. 기숙사는 보장되나요?</div>
-                    <div class="faq-answer">대부분의 대학교는 외국인 유학생에게 기숙사를 우선적으로 배정합니다. 케이웨이글로벌(K-WAY GLOBAL)은 기숙사 신청 기간과 방법을 안내해 드리며, 만약 기숙사에 배정되지 않거나 외부 숙소를 원할 경우, 안전하고 합리적인 가격의 원룸이나 쉐어하우스를 찾을 수 있도록 도와드립니다.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Q. TOPIK(한국어능력시험)이 꼭 필요한가요?</div>
-                    <div class="faq-answer">학부 신입학의 경우 대부분 TOPIK 3급 이상을 요구하며, 편입이나 대학원은 4급 이상이 필요한 경우가 많습니다. 학교 및 학과별로 요구 조건이 다르기 때문에, 저희가 학생의 목표에 맞춰 필요한 TOPIK 급수와 준비 전략을 함께 계획해 드립니다. 영어 트랙의 경우 TOPIK 성적이 필요 없는 경우도 있습니다.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Q. 입학 지원은 언제 시작해야 하나요?</div>
-                    <div class="faq-answer">한국 대학교는 보통 3월과 9월에 학기를 시작합니다. 3월 입학을 위해서는 전년도 9월~11월, 9월 입학을 위해서는 5월~6월에 원서 접수가 진행됩니다. 성공적인 입학을 위해 최소 6개월 전부터 케이웨이글로벌(K-WAY GLOBAL)과 상담을 시작하여 서류 준비, 자기소개서 작성 등을 미리 준비하는 것이 좋습니다.</div>
+        <!-- 서비스 (Services) -->
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="inline-block bg-primary text-white text-2xl md:text-3xl font-extrabold py-2 px-8 rounded-full shadow-lg mb-4">전문적인 유학 토탈 서비스</h2>
+                <p class="text-gray-600 mb-12 text-lg">컨설팅부터 사후관리까지, 유학의 모든 단계를 책임집니다.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-secondary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">대학/어학당 컨설팅</h3>
+                        <p class="text-gray-600 text-sm">학생의 전공, 성적, 목표에 맞는 최적의 학교와 과정을 추천합니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-secondary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">입학 지원 대행</h3>
+                        <p class="text-gray-600 text-sm">자기소개서, 학업계획서 작성부터 원서 접수까지 모든 과정을 도와드립니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-secondary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">유학 비자 발급 지원</h3>
+                        <p class="text-gray-600 text-sm">복잡한 비자 서류 준비와 신청 절차를 정확하고 신속하게 지원합니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-secondary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H7" />
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">장학금 정보 제공</h3>
+                        <p class="text-gray-600 text-sm">정부, 대학, 재단 등 다양한 장학금 정보를 제공하여 학비 부담을 덜어드립니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-secondary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2-2h8a1 1 0 001-1zM21 11.243l-1.42-4.26a1 1 0 00-.94-.683H13M19 16h2a1 1 0 001-1v-3.43a1 1 0 00-.24-.65l-2.4-3.6a1 1 0 00-.8-.4H13"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">공항 픽업 서비스</h3>
+                        <p class="text-gray-600 text-sm">한국 도착 시 공항에서 숙소까지 안전하고 편안하게 이동할 수 있도록 돕습니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-secondary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">숙소 알선</h3>
+                        <p class="text-gray-600 text-sm">기숙사, 원룸, 쉐어하우스 등 예산과 생활 패턴에 맞는 최적의 숙소를 찾아드립니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-secondary mb-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">휴대폰 개통 및 은행 계좌</h3>
+                        <p class="text-gray-600 text-sm">한국 생활 필수품인 휴대폰과 은행 계좌 개설을 빠르고 간편하게 처리해 드립니다.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-secondary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">지속적인 사후 관리</h3>
+                        <p class="text-gray-600 text-sm">유학 생활 중 발생하는 문제나 고민을 해결할 수 있도록 지속적으로 소통하고 지원합니다.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>&copy; 2025 케이웨이글로벌 K-WAY GLOBAL. All rights reserved.</p>
-        <p>동남아시아 학생들의 성공적인 한국 유학을 지원합니다.</p>
+        <!-- 주요대학 (Universities) -->
+        <section id="universities" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="inline-block bg-primary text-white text-2xl md:text-3xl font-extrabold py-2 px-8 rounded-full shadow-lg mb-4">지역별 주요 대학</h2>
+                <p class="text-gray-600 mb-12 text-lg">대한민국 전역의 우수한 대학들을 지역별로 살펴보세요.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 수도권 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary border-b-2 border-secondary pb-2 mb-4 text-center">수도권</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://www.snu.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">SNU</span></div>
+                                <h4 class="font-semibold">서울대학교</h4>
+                            </a>
+                            <a href="https://www.yonsei.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">YONSEI</span></div>
+                                <h4 class="font-semibold">연세대학교</h4>
+                            </a>
+                            <a href="https://www.korea.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">KOREA</span></div>
+                                <h4 class="font-semibold">고려대학교</h4>
+                            </a>
+                            <a href="https://www.skku.edu/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">SKKU</span></div>
+                                <h4 class="font-semibold">성균관대학교</h4>
+                            </a>
+                             <a href="https://www.hanyang.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">HYU</span></div>
+                                <h4 class="font-semibold">한양대학교</h4>
+                            </a>
+                            <a href="https://www.sogang.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">SGU</span></div>
+                                <h4 class="font-semibold">서강대학교</h4>
+                            </a>
+                            <a href="https://www.cau.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">CAU</span></div>
+                                <h4 class="font-semibold">중앙대학교</h4>
+                            </a>
+                            <a href="https://www.khu.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">KHU</span></div>
+                                <h4 class="font-semibold">경희대학교</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 경기권 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary border-b-2 border-secondary pb-2 mb-4 text-center">경기권</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://www.ajou.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">AJOU</span></div>
+                                <h4 class="font-semibold">아주대학교</h4>
+                            </a>
+                            <a href="https://www.inha.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">INHA</span></div>
+                                <h4 class="font-semibold">인하대학교</h4>
+                            </a>
+                            <a href="https://www.gachon.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">GACHON</span></div>
+                                <h4 class="font-semibold">가천대학교</h4>
+                            </a>
+                            <a href="https://www.kyonggi.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">KGU</span></div>
+                                <h4 class="font-semibold">경기대학교</h4>
+                            </a>
+                            <a href="https://www.dankook.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">DKU</span></div>
+                                <h4 class="font-semibold">단국대학교</h4>
+                            </a>
+                            <a href="https://www.hufs.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">HUFS</span></div>
+                                <h4 class="font-semibold">한국외국어대학교</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 충청권 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary border-b-2 border-secondary pb-2 mb-4 text-center">충청권</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                           <a href="https://www.kaist.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">KAIST</span></div>
+                                <h4 class="font-semibold">KAIST</h4>
+                            </a>
+                            <a href="https://www.cnu.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">CNU</span></div>
+                                <h4 class="font-semibold">충남대학교</h4>
+                            </a>
+                            <a href="https://www.chungbuk.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">CBNU</span></div>
+                                <h4 class="font-semibold">충북대학교</h4>
+                            </a>
+                            <a href="https://www.koreatech.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">KOREATECH</span></div>
+                                <h4 class="font-semibold">한국기술교육대학교</h4>
+                            </a>
+                            <a href="https://www.hanbat.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">HBNU</span></div>
+                                <h4 class="font-semibold">한밭대학교</h4>
+                            </a>
+                        </div>
+                    </div>
+                     <!-- 경상권 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary border-b-2 border-secondary pb-2 mb-4 text-center">경상권</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://www.pusan.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">PNU</span></div>
+                                <h4 class="font-semibold">부산대학교</h4>
+                            </a>
+                            <a href="https://www.knu.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">KNU</span></div>
+                                <h4 class="font-semibold">경북대학교</h4>
+                            </a>
+                            <a href="https://postech.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">POSTECH</span></div>
+                                <h4 class="font-semibold">POSTECH</h4>
+                            </a>
+                            <a href="https://www.unist.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">UNIST</span></div>
+                                <h4 class="font-semibold">UNIST</h4>
+                            </a>
+                             <a href="https://www.gnu.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">GNU</span></div>
+                                <h4 class="font-semibold">경상국립대학교</h4>
+                            </a>
+                            <a href="https://www.pknu.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">PKNU</span></div>
+                                <h4 class="font-semibold">부경대학교</h4>
+                            </a>
+                        </div>
+                    </div>
+                     <!-- 전라권 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary border-b-2 border-secondary pb-2 mb-4 text-center">전라권</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                           <a href="https://www.jnu.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">JNU</span></div>
+                                <h4 class="font-semibold">전남대학교</h4>
+                            </a>
+                            <a href="https://www.jbnu.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">JBNU</span></div>
+                                <h4 class="font-semibold">전북대학교</h4>
+                            </a>
+                            <a href="https://www.gist.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">GIST</span></div>
+                                <h4 class="font-semibold">GIST</h4>
+                            </a>
+                            <a href="https://www.chosun.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">CHOSUN</span></div>
+                                <h4 class="font-semibold">조선대학교</h4>
+                            </a>
+                        </div>
+                    </div>
+                     <!-- 강원/제주권 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary border-b-2 border-secondary pb-2 mb-4 text-center">강원/제주권</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                           <a href="https://www.kangwon.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">KNU</span></div>
+                                <h4 class="font-semibold">강원대학교</h4>
+                            </a>
+                            <a href="https://www.jejunu.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">JNU</span></div>
+                                <h4 class="font-semibold">제주대학교</h4>
+                            </a>
+                            <a href="https://www.hallym.ac.kr/" target="_blank" class="text-center p-2 rounded hover:bg-gray-100 transition-colors">
+                                <div class="mx-auto h-16 w-16 rounded-full border-2 border-gray-200 flex items-center justify-center mb-2"><span class="text-lg font-bold text-primary">HALLYM</span></div>
+                                <h4 class="font-semibold">한림대학교</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 유학절차 (Process) -->
+        <section id="process" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="inline-block bg-primary text-white text-2xl md:text-3xl font-extrabold py-2 px-8 rounded-full shadow-lg mb-4">K-WAY GLOBAL 유학 절차</h2>
+                <p class="text-gray-600 mb-12 text-lg">체계적인 프로세스로 성공적인 유학을 약속합니다.</p>
+                <div class="relative wrap overflow-hidden p-10 h-full">
+                    <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+                    <!-- Right Timeline -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-secondary shadow-xl w-12 h-12 rounded-full">
+                            <h1 class="mx-auto font-bold text-lg text-white">1</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-xl">상담 및 학교 선정</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">전문 컨설턴트와의 1:1 심층 상담을 통해 학생에게 맞는 학교와 전공을 결정합니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- Left Timeline -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-secondary shadow-xl w-12 h-12 rounded-full">
+                            <h1 class="mx-auto text-white font-bold text-lg">2</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-xl">입학 서류 준비 및 지원</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">입학에 필요한 모든 서류(학업계획서, 추천서 등)를 준비하고 원서를 접수합니다.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Timeline -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-secondary shadow-xl w-12 h-12 rounded-full">
+                            <h1 class="mx-auto font-bold text-lg text-white">3</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-xl">입학 허가 및 학비 납부</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">합격 후 입학허가서를 수령하고, 지정된 기간 내에 학비를 납부합니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- Left Timeline -->
+                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-secondary shadow-xl w-12 h-12 rounded-full">
+                            <h1 class="mx-auto text-white font-bold text-lg">4</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-xl">비자 신청 및 발급</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">표준입학허가서를 바탕으로 유학 비자(D-2) 신청을 진행하고 발급받습니다.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Timeline -->
+                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-secondary shadow-xl w-12 h-12 rounded-full">
+                            <h1 class="mx-auto font-bold text-lg text-white">5</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
+                            <h3 class="font-bold text-gray-800 text-xl">출국 준비 및 현지 정착</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-600 mt-2">항공권, 숙소, 공항 픽업 등 출국 준비를 마치고, 한국 현지 생활 정착을 지원합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="inline-block bg-primary text-white text-2xl md:text-3xl font-extrabold py-2 px-8 rounded-full shadow-lg mb-4">자주묻는 Q&A</h2>
+                <p class="text-gray-600 mb-12 text-lg">유학 준비에 관한 궁금증을 해결해 드립니다.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 text-lg font-semibold flex justify-between items-center">
+                            <span>비자는 어떻게 준비해야 하나요?</span>
+                            <svg class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700">
+                            <p>학위 과정은 유학(D-2) 비자, 어학연수는 일반연수(D-4) 비자가 필요합니다. K-WAY GLOBAL에서는 대학교에서 표준입학허가서를 발급받은 후, 학생에게 필요한 모든 비자 서류 준비와 신청 절차를 단계별로 상세히 안내해 드립니다.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 text-lg font-semibold flex justify-between items-center">
+                            <span>한국 유학 비용은 보통 얼마나 드나요?</span>
+                            <svg class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700">
+                            <p>비용은 지역과 학교, 전공에 따라 차이가 큽니다. 일반적으로 수도권 사립대학교 기준 한 학기 등록금은 400만원에서 800만원 사이이며, 월 생활비(숙소, 식비, 교통비 등)는 60만원에서 100만원 정도 예상할 수 있습니다. 저희가 장학금 정보를 함께 안내하여 부담을 덜어드립니다.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 text-lg font-semibold flex justify-between items-center">
+                            <span>유학 중 아르바이트를 할 수 있나요?</span>
+                            <svg class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700">
+                            <p>네, 가능합니다. 유학(D-2) 비자는 입국 6개월 후부터, 어학연수(D-4) 비자는 출석률 90% 이상을 유지하며 입국 6개월이 지나면 시간제 취업(아르바이트) 허가를 받을 수 있습니다. 주중에는 최대 20시간까지 가능하며, 관련 절차도 저희가 도와드립니다.</p>
+                        </div>
+                    </div>
+                     <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 text-lg font-semibold flex justify-between items-center">
+                            <span>한국어를 전혀 못해도 유학이 가능한가요?</span>
+                            <svg class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700">
+                            <p>네, 가능합니다. 최근 많은 한국 대학들이 외국인 유학생을 위해 100% 영어로만 진행되는 학위 과정을 다양하게 제공하고 있습니다. 또는, 대학교 부설 어학당에서 한국어를 먼저 배운 후 학위 과정에 진학하는 방법도 있습니다. K-WAY GLOBAL이 학생의 상황에 가장 적합한 과정을 찾아드립니다.</p>
+                        </div>
+                    </div>
+                     <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 text-lg font-semibold flex justify-between items-center">
+                            <span>유학생 보험은 필수인가요?</span>
+                            <svg class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700">
+                            <p>네, 대한민국에 6개월 이상 체류하는 모든 외국인은 국민건강보험에 의무적으로 가입해야 합니다. 이를 통해 병원 방문 시 진료비의 상당 부분을 지원받는 등 저렴한 비용으로 한국의 우수한 의료 서비스를 이용할 수 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 text-lg font-semibold flex justify-between items-center">
+                            <span>숙소는 어떻게 구해야 하나요? 기숙사 신청이 가능한가요?</span>
+                            <svg class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700">
+                            <p>대부분의 대학교는 외국인 유학생에게 기숙사를 우선적으로 배정합니다. K-WAY GLOBAL은 기숙사 신청 기간과 방법을 안내해 드리며, 만약 기숙사에 배정되지 않거나 외부 숙소를 원할 경우, 안전하고 합리적인 가격의 원룸이나 쉐어하우스를 찾을 수 있도록 도와드립니다.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 text-lg font-semibold flex justify-between items-center">
+                            <span>입학을 위해 필요한 한국어 능력 시험(TOPIK) 성적이 있나요?</span>
+                            <svg class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700">
+                            <p>학부 신입학의 경우 대부분 TOPIK 3급 이상을 요구하며, 편입이나 대학원은 4급 이상이 필요한 경우가 많습니다. 학교 및 학과별로 요구 조건이 다르기 때문에, 저희가 학생의 목표에 맞춰 필요한 TOPIK 급수와 준비 전략을 함께 계획해 드립니다. 영어 트랙의 경우 TOPIK 성적이 필요 없는 경우도 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border-b">
+                        <button class="faq-question w-full text-left py-4 text-lg font-semibold flex justify-between items-center">
+                            <span>입학 지원은 보통 언제부터 준비해야 하나요?</span>
+                            <svg class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                        </button>
+                        <div class="faq-answer pb-4 text-gray-700">
+                            <p>한국 대학교는 보통 3월과 9월에 학기를 시작합니다. 3월 입학을 위해서는 전년도 9월~11월, 9월 입학을 위해서는 5월~6월에 원서 접수가 진행됩니다. 성공적인 입학을 위해 최소 6개월 전부터 K-WAY GLOBAL과 상담을 시작하여 서류 준비, 자기소개서 작성 등을 미리 준비하는 것이 좋습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 K-WAY GLOBAL. All Rights Reserved.</p>
+            <p class="text-sm text-gray-300 mt-2">경기도 평택시 정암로21, 2층 213호</p>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+
+                if (href === '#') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = question.querySelector('svg');
+
+            question.addEventListener('click', () => {
+                const isOpened = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').style.maxHeight = '0px';
+                        otherItem.querySelector('.faq-question svg').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current item
+                if (isOpened) {
+                    answer.style.maxHeight = '0px';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+    </script>
+
 </body>
 </html>
+
